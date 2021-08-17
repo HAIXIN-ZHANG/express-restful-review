@@ -1,21 +1,19 @@
-const express = require("express");
-const validateId = require("../middleware/validatedId")
+const express = require('express')
+const validateId = require('../middleware/validatedId')
 const {
-    getAllPost,
-    addPost,
-    updatePostById,
-    deletePostById,
-    getPostById,
-} = require("../controllers/post");
+	getAllPost,
+	addPost,
+	updatePostById,
+	deletePostById,
+	getPostById,
+} = require('../controllers/post')
 
-const router = express.Router();
+const router = express.Router()
 
-router.get("", getAllPost);
-router.get("/:id", validateId, getPostById);
-router.post("", addPost);
-router.put("/:id", validateId, updatePostById);
-router.delete("/:id", validateId, deletePostById);
+router.get('', getAllPost)
+router.get('/:id', validateId, getPostById)
+router.post('', addPost)
+router.put('/:id', validateId, updatePostById)
+router.delete('/:id', validateId, deletePostById)
 
-module.exports = router;
-
-
+module.exports = router
